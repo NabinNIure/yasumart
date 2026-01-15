@@ -1,0 +1,730 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+
+body{
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+.logo{
+    height: 90px;
+    width: 100px;  
+}
+span{
+    color: orange;
+    font-weight:bold ;
+}
+.header-main{
+    display: flex;
+    padding: 10px 10px;
+    background-color: rgb(213, 237, 210);
+    height: 100px;
+    margin-bottom: 2px;
+}
+
+h1{
+    font-size: 40px;
+    padding-left: 10PX;
+    margin-top: 10px;
+    
+}
+.main-nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: rgb(193, 232, 154);
+    position: sticky;
+    top: 0;
+    padding: 0 20px;
+}    /* チェックボックスは常に隠す */
+
+#menu-btn-check{
+    display: none;
+}
+    /* PCでは三本線ボタンは表示しない */
+.menu-btn{
+    display: none;
+}
+
+    /* PCでは携帯用のヘッダ表示しない */
+.header-container{
+    display: none;
+}
+
+.contact-login-group{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    align-items: center;
+    display: flex;
+}
+
+.contact-login-group p{
+    font-weight: 500;
+    color: rgb(5, 184, 255);
+    padding-right: 80px;
+
+}
+
+.contact-login-group button{
+    padding: 20px 30px;
+    background-color: rgb(213, 237, 210);
+    color: rgb(253, 164, 0);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; 
+    box-shadow:5px 5px 10px black;
+    font-size: 15px;
+    font-weight: bold;
+}
+.contact-login-group button:hover{
+    color: green;
+    font-size: 15px;
+    background-color: #d5a39e;
+    font-weight: bold;
+}
+.main-nav  ul li{
+    padding: 10px;
+    padding-right: 100px;
+    border-right: 1.5px solid rgb(243, 142, 0);
+    
+}
+/*last ko riight side ko line hataune*/
+.main-nav ul li:last-child{
+    border-right: none;
+    padding-right: 0;
+}
+.main-nav a{
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 5PX 0;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    
+}
+.main-nav a:hover{
+    color: orangered;
+}
+.main-nav a::after{
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    height: 5px; 
+    background-color: #ffa200; 
+    left: 50%; 
+    width: 0;  
+    transform: translateX(-50%); 
+    transition: width 0.3s ease-in-out;
+}
+.main-nav a:hover::after {
+  width: 100%;
+}
+/* ナビメニューのを真ん中になるように移動 */
+
+.contact-form1{
+    margin-right:50px; 
+}
+.home1{
+    margin-left: 30px;
+}
+.specialized1{
+    margin-left: 30px;
+}
+
+.Recommendation1{
+    margin-left: 30px;
+}
+.access1{
+    margin-left: 30px;
+}
+
+/*slider*/
+
+.slider-container {
+    width: 1250px;
+    height: 400px; 
+    margin: auto;
+    overflow: hidden; 
+    border: 2px solid #333; /
+}
+
+
+.slider {
+   
+    width: 5000px; 
+    height: 100%;
+    display: flex; 
+    animation: slide 30s infinite; 
+}
+
+.slider img {
+    width: 1250px; 
+    height: 100%;
+    object-fit: cover; 
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(0); }
+
+  25%  { transform: translateX(-1250px); }
+  45%  { transform: translateX(-1250px); }
+
+  50%  { transform: translateX(-2500px); }
+  70%  { transform: translateX(-2500px); }
+
+  75%  { transform: translateX(-3750px); }
+  95%  { transform: translateX(-3750px); }
+/* ekkaixin ma 1ST slide ma jane garaune ko lagi yo talako 95.01% wala line add gareko  */
+  95.01% { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+.hero{
+    width: 800px;
+    height: 548px;
+    background-color: rgb(76, 175, 80);
+    color: white;
+    padding: 60px;
+    text-align: center;
+}
+
+.hero h1{
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.hero p{
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+
+.cta-button {
+    background: #FF9800;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+        }
+
+    .cta-button:hover {
+    background: #F57C00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.6);
+        }
+
+    .greeting-box{
+        padding: 5px;
+        margin-top: 20px;
+        width: 700px;
+        height: 230px;
+        background: rgb(61, 125, 40);
+        border-radius: 15px;
+        box-shadow:0px 10px 15px rgb(0, 9, 1);
+        justify-content: center;
+        }
+    
+
+    .greeting-title{
+        color: #ff9900;
+        padding-bottom: 10px;
+        text-align: start;
+        font-weight: 900;
+        }
+
+    .greeting-statement{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+
+        
+        
+        }
+/*news*/
+ aside{
+    display: flex;
+    gap: 30px;
+ }
+
+ section{
+    width: 409px;
+ }
+
+section h2 {
+    font-size: 40px;
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 1rem;
+ }
+ .section-subtitle{
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 18px;
+    }
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    }
+
+.news-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    }
+.news-card:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+    background-color: #bed8b2;
+
+    }
+.news-date {
+    color: #FF9800;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.news-title {
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.container{
+    width: 1250px;
+    margin: 0 auto;
+}
+/* 今週におっすめ */
+
+.container h2{
+    text-align: center;
+    color: #4CAF50;
+    margin-top: 60px;
+
+}
+.subtitle{
+    text-align: center;
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+.product-grid{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+
+}
+.product-card{
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+.product-image{
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+    font-size: 80px;
+    text-align: center;
+}
+.product-info{
+padding: 10px;
+}
+.product-name{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+.product-origin{
+    color: orange;
+}
+.product-description{
+    padding-top: 20px;
+}
+.product-price{
+    color:#4CAF50;
+    font-size: 20px;
+    font-weight: bold;
+}
+footer{
+    background-color: black;
+    color: white;
+    border: 1px silod red;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+/* お店のこだわり */
+.commitment-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.commitment-card{
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+    height: 250px;
+}
+.commitment-icon{
+    font-size: 60px;
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+}
+.commitment-card h3{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+/* お問い合わせ */
+.contact-form{
+    width: 700px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    border-radius: 10px;
+}
+.form-group{
+    /* margin-bottom: 15px; */
+    margin-top: 15px;
+}
+
+label{
+    font-weight: bold;
+}
+input[type="text"],
+input[type="mail"],
+textarea{
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea{
+    resize: vertical;
+    height: 200px;
+}
+
+.submit-button{
+    background-color: #5cb85c;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 270px;
+
+}
+.submit-button:hover{
+   background-color:orange;
+}
+
+
+/* 携帯電話の時 */
+
+/* ======================================================
+   スマホ用（画面幅が768px以下のとき）の設定
+   ====================================================== */
+@media screen and (max-width: 768px) {
+    
+    /* 全体の横幅制限を解除 */
+    .container, .slider-container, .hero, .contact-form {
+        width: 100% !important;
+        max-width: 100%;
+        margin: 0 auto;
+}
+.contact-login-group{
+    display: none !important;
+}
+
+.contact-login-group button{
+    display: none;
+}
+/* <!-- 携帯電話で見る時に電話番号とははメニューで表示させたい --> */
+.mobile-contact{
+    display: none;
+}
+
+/* <!-- 携帯電話で見る時にデスクトップの【header-main】ヘッダを見せたくないです  
+HTML内で携帯用にヘッダ【header-container】作っているので、、、、
+--> */
+.header-main{
+    display: none;
+}
+
+  .header-container {
+        display: flex;
+        align-items: center; /* 上下中央揃え */
+        justify-content: space-between; /* 両端と中央に配置 */
+        padding: 5px 10px;
+        background-color: rgb(213, 237, 210);
+        height: 60px; /* 高さをコンパクトに */
+        position: relative;
+    }
+
+    /* ロゴのサイズ調整 */
+    .logo {
+        height: 40px;
+        width: auto;
+        
+    }
+
+    /* タイトルのサイズと位置 */
+    h1 {
+        font-size: 18px; /* スマホ用に小さく */
+        margin: 0;
+        padding: 0;
+        flex-grow: 1; /* 中央に寄せるための調整 */
+        text-align: left;
+    }
+
+.header-container h1{
+padding-right: 80px;
+}
+
+    /* ハンバーガーボタンの位置調整 */
+    .menu-btn {
+        position: relative; /* 固定位置から相対位置へ */
+        display: flex;
+        width: 40px;
+        height: 40px;
+        background-color: transparent; /* 背景を透明に */
+        z-index: 100;
+    }
+
+
+
+    #menu-btn-check:checked ~ ul {
+        left: 0; /* 全画面で表示 */
+    }
+
+    .contact-login-group {
+        display: none !important;
+    }
+
+
+
+/* 電話番号と営業時間はメインメニューの中に入れら後のスタイル */
+.mobile-contact {
+        display: block; /* スマホのみ表示 */
+        padding: 20px 30px;
+        margin-top: 20px;
+        border-top: 1px dashed #fff; /* 区切り線 */
+        color: #333;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+    
+    .mobile-contact p {
+        margin: 5px 0;
+    }
+
+
+.header-main {
+        height: auto;
+        justify-content: center;
+        padding: 20px 0;
+    }
+h1 {
+    font-size: 25px;
+    text-align: center;
+    }
+
+
+.hero h1{
+    font-size: 19px;
+    font-weight: bold;
+    }
+.hero p{
+    font-size: 15px;
+}
+
+    .menu-btn {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        background-color: rgba(205, 220, 63, 0.162);
+        cursor: pointer;
+        position: absolute; /* 右上に配置 */
+        top: 0;
+        right: 0;
+    }
+
+.menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #333;
+        position: absolute;
+        transition: all 0.5s;
+    }
+    .menu-btn span:before { bottom: 8px; }
+    .menu-btn span:after { top: 8px; }
+
+    /* ボタンを押した時のアニメーション（三本線が×になる） */
+    #menu-btn-check:checked ~ .menu-btn span {
+        background-color: rgba(255, 255, 255, 0); /* 真ん中の線を消す */
+    }
+    #menu-btn-check:checked ~ .menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #menu-btn-check:checked ~ .menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* --- メニューリストの開閉設定 --- */
+    .main-nav ul {
+        display: block; /* 縦並びに変更 */
+        position: fixed;
+        top: 0;
+        left: 100%; /* 最初は画面の右外に隠す */
+        width: 80%; /* メニューを画面のみぎ側にくっちいて見えるようにする。。100%にするとメニュー真ん中になる */
+        height: 100%;
+        background-color: rgba(216, 192, 84, 0.95);
+        transition: all 0.5s;
+        z-index: 90;
+        padding-top: 80px; /* ボタンと重ならないように */
+    }
+
+    /* チェックボックスが入った時（ボタン押下時）にメニューをスライドイン */
+    #menu-btn-check:checked ~ ul {
+        left: 20%; /* 画面内にスライド */
+    }
+
+
+
+    /* ヘッダー：ロゴと情報を縦に並べる */
+    .header-main {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-login-group {
+        position: static; /* PCの絶対配置を解除 */
+        flex-direction: column;
+        padding: 10px;
+        background: #f9f9f9;
+        width: 100%;
+    }
+
+    .contact-login-group p {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* ナビゲーション：2列、または1列で折り返す */
+    .main-nav ul {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .main-nav ul li {
+        padding: 10px 0;
+        margin: 0 !important;
+        border-right: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+    }
+
+
+    h2{
+        font-size: 20px !important;  
+        text-align: center  !important;
+    }
+    /* スライダー：画面幅に合わせて伸縮させる */
+    .slider-container {
+        height: 250px; /* スマホでは高さを抑える */
+    }
+    .slider img {
+        width: 100vw; /* 1枚の幅をスマホ画面いっぱいにする */
+    }
+    
+    /* PCの固定移動幅(1250px)を画面幅(100vw)に合わせたアニメに修正 */
+    @keyframes slide {
+        0%, 20% { transform: translateX(0); }
+        25%, 45% { transform: translateX(-100vw); }
+        50%, 70% { transform: translateX(-200vw); }
+        75%, 95% { transform: translateX(-300vw); }
+        100% { transform: translateX(0); }
+    }
+
+    /* ヒーローセクションと店主挨拶 */
+    aside {
+        flex-direction: column; /* 挨拶とニュースを縦に並べる */
+    }
+
+    .hero {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .greeting-box {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    /* 商品・ニュース一覧：1列にする */
+    .product-grid, .news-grid {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    /* お問い合わせ：ボタンを中央に */
+    .submit-button {
+        margin: 20px auto;
+        width: 80%;
+        display: block;
+    }
+    .mobile-contact{
+    color: #0a0a23;
+    font-style: italic;
+    font-size: 15px;
+    padding: 20px !important;
+}
+
+
+}
+
+
+
+

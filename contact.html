@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>やすマート向島店</title>
+</head>
+
+<body>
+        <!-- ヘッダー -->
+         <header>
+                <div class="header-main">
+                    <img src="logo/logo1.png" alt="LOGO" class="logo">
+                    <h1>やす<span>マート</span>向島店</h1>
+                </div>
+                <div class="contact-login-group">
+                    <p>
+                        ☎000-0000-0000<br>
+                        営業時間 9:00～21:00 <br>
+                    </p>
+                    <button>LOGIN</button>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li class="home1"><a href="index.html">ホーム</a></li>
+                        <li class="specialized1"><a href="specialized.html">お店のこだわり</a></li>
+                        <li class="Recommendation1" id><a href="index.html#weekly-recommendation">今週のおすすめ</a></li>
+                        <li class="access1"><a href="access.html">アクセス</a></li>
+                        <li class="contact-form1"><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+         </header>
+
+         
+         <!-- 携帯電話のためのヘッダ-->
+<header>
+    <div class="header-container">
+        <img src="logo/logo1.png" alt="LOGO" class="logo">
+        
+        <h1>やす<span>マート</span>向島店</h1>
+        
+        <nav class="main-nav">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="specialized.html">お店のこだわり</a></li>
+                <li><a href="#weekly-recommendation">今週のおすすめ</a></li>
+                <li><a href="access.html">アクセス</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+                <li class="mobile-contact">
+                    <p>☎ 000-0000-0000</p>
+                    <p>営業時間 9:00～21:00</p>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+
+
+         <section class="contact-form">
+            <h2>お問い合わせフォーム</h2>
+            <p>必要事項を入力し、送信ボタンを押してください。</p>
+
+            <form action="submit-contact" method="post">
+                <div class="form-group">
+                    <label for="name">お名前　<span style="color: red;">(必要)</span></label><br>
+                    <input type="text" id="name"  name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">メールアドレス　<span style="color: red;">(必要)</span></label><br>
+                    <input type="mail" id="mail"  name="mail" required placeholder="info@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">電話番号　<span style="color: red;">(必要)</span></label><br>
+                    <input type="text" id="contact-number"  name="contact-number" required placeholder="123-4567-8910">
+                </div>
+                <div>
+                    <label for="text">お問い合わせ種別</label>
+                    <div >
+                        <input type="radio" id="type_product" name="ontact_typ" value="product" checked>
+                        <label for="type_product">商品について</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="type_service" name="ontact_typ" value="service" >
+                        <label for="type_service">サービスについて</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="type_other" name="ontact_typ" value="other" >
+                        <label for="other">その他</label>
+                    </div>
+                    <div  class="form-group">
+                        <label for="message" >お問い合わせ内容<span style="color: red;">(必須)</span></label>
+                        <textarea name="message" id="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">送信する</button>
+                </div>
+            </form>
+         </section>    
+    <footer>
+        <p>Copyright© Yasu-Mart All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
